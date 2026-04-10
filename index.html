@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missão Secreta Multiplayer</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Missão Secreta</h1>
+
+<div id="login">
+
+<input type="text" id="nome" placeholder="Seu nome">
+
+<button onclick="criarSala()">Criar Sala</button>
+
+<input type="text" id="codigo" placeholder="Código da sala">
+
+<button onclick="entrarSala()">Entrar na Sala</button>
+
+</div>
+
+<div id="sala" style="display:none">
+
+<h2>Sala: <span id="codigoSala"></span></h2>
+
+<h3>Jogadores</h3>
+<ul id="jogadores"></ul>
+
+<button onclick="iniciarJogo()">Iniciar Jogo</button>
+
+<div id="missaoArea" style="display:none">
+<h3>Sua missão secreta</h3>
+<p id="missao"></p>
+</div>
+
+</div>
+
+</div>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
